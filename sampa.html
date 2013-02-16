@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-r">
+<html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
 	<title>SAMPA JS - Logo em CSS</title>
@@ -9,46 +9,43 @@
 		font-family: arial;
 	}
 		.map-top{
-		    width: 310px;
-		    height: 1px;
 		    border: solid 220px transparent;
 		    border-bottom: solid 240px #f7db3c;
 		    border-top: none;
+		    height: 1px;
+		    position: relative;
+		    width: 310px;
 		}
 		.map-bottom{
-				margin-left: 220px;
-		    width: 310px;
-		    height: 1px;
 		    border: solid 220px transparent;
 		    border-top: solid 240px #f7db3c;
 		    border-bottom: none;
+		    position: relative;
+		    height: 1px;
+		    margin-left: 220px;
+		    width: 310px;
 		}
-		.map{
-			position: relative;
-		}
-		.sampa{
+		.map-top:before{
+			content: "SAMPA";
 			font-size: 90px;
 			font-weight: bold;
 			letter-spacing: -5px;
 			position: absolute;
 			top: 95px;
-			left: 150px;
+			left: -45px;
 		}
-		.js{
+		.map-bottom:before{
+			content: "JS";
 			font-size: 250px;
 			font-weight: bold;
 			position: absolute;
-			top: 195px;
-			left: 430px;
+			top: -265px;
+			left: 0px;
 		}
 	</style>
 </head>
 <body>
-	<div class="map">
 		<div class="map-top"></div>
 		<div class="map-bottom"></div>
-		<span class="sampa">SAMPA</span>
-		<span class="js">JS</span>
-	</div>
 </body>
 </html>
